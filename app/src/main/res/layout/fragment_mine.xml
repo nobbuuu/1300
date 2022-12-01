@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="35dp"
+            android:src="@mipmap/avatar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            android:id="@+id/sexIv"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="30dp"
+            android:layout_marginStart="@dimen/dp_20"
+            android:src="@mipmap/mine_avatar"
+            app:layout_constraintBottom_toBottomOf="@+id/avatarIv"
+            app:layout_constraintStart_toEndOf="@+id/avatarIv"
+            app:layout_constraintTop_toTopOf="@+id/avatarIv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="何健飞"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintBottom_toBottomOf="@+id/sexIv"
+            app:layout_constraintStart_toEndOf="@+id/sexIv"
+            app:layout_constraintTop_toTopOf="@+id/sexIv" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:src="@mipmap/icon_next"
+            app:layout_constraintBottom_toBottomOf="@id/avatarIv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/avatarIv" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:src="@mipmap/ic_msg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.dream.xiaobei.widget.StartEndItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        app:isDivider="false"
+        app:isSelect="true"
+        app:startTextColor="@color/black"
+        app:startImg="@mipmap/ic_level"
+        app:startText="评价星级" />
+    <com.dream.xiaobei.widget.StartEndItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        app:isDivider="false"
+        app:isSelect="true"
+        app:startTextColor="@color/black"
+        app:startImg="@mipmap/ic_identify"
+        app:startText="主试认证" />
+    <com.dream.xiaobei.widget.StartEndItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        app:isDivider="false"
+        app:isSelect="true"
+        app:startTextColor="@color/black"
+        app:startImg="@mipmap/ic_experement"
+        app:startText="参与过的实验" />
+    <com.dream.xiaobei.widget.StartEndItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isDivider="false"
+        app:isSelect="true"
+        app:startTextColor="@color/black"
+        app:startImg="@mipmap/ic_publish"
+        app:startText="发布过的实验" />
+    <com.dream.xiaobei.widget.StartEndItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isDivider="false"
+        app:isSelect="true"
+        app:startTextColor="@color/black"
+        app:startImg="@mipmap/experiment"
+        app:startText="发布实验" />
+    <com.dream.xiaobei.widget.StartEndItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isDivider="false"
+        app:startTextColor="@color/black"
+        app:isSelect="true"
+        app:startImg="@mipmap/ic_audit_subject"
+        app:startText="审核被试" />
+    <com.dream.xiaobei.widget.StartEndItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        app:isDivider="false"
+        app:startTextColor="@color/black"
+        app:isSelect="true"
+        app:startImg="@mipmap/ic_abaout_me"
+        app:startText="关于我们" />
+    <com.dream.xiaobei.widget.StartEndItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        app:isDivider="false"
+        app:startTextColor="@color/black"
+        app:isSelect="true"
+        app:startImg="@mipmap/ic_settings"
+        app:startText="设置" />
+</LinearLayout>
