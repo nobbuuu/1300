@@ -24,13 +24,18 @@
         <meta-data
             android:name="android.notch_support"
             android:value="true" />
+
         <activity android:name=".other.LaunchActivity"/>
-        <activity android:name=".user.ui.UserEdtActivity">
+        <activity android:name=".user.ui.WelComeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".main.MainActivity"/>
+        <activity android:name=".user.ui.IdentifyActivity"/>
+        <activity android:name=".user.ui.UserConfirmActivity"/>
+        <activity android:name=".user.ui.UserEdtActivity"/>
     </application>
 
 </manifest>

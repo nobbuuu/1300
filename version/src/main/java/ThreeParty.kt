@@ -52,6 +52,7 @@ object ThreeParty {
     //https://github.com/zhpanvip/BannerViewPager/blob/master/README_CN.md
     const val BannerViewPager = "com.github.zhpanvip:BannerViewPager:3.5.2"
     const val viewpagerindicator = "com.github.zhpanvip:viewpagerindicator:1.0.5"
+    const val banner = "io.github.youth5201314:banner:2.2.2"
 
     //代替shape ， 其他状态 ViewHelper
     //https://github.com/RuffianZhong/RWidgetHelper
