@@ -29,12 +29,7 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(){
         config.isDoubleBack = true
     }
 
-    override fun initStateBar(stateBarColor: Int, isLightMode: Boolean, fakeView: View?) {
-        BarUtils.setStatusBarLightMode(this, true)
-    }
-
     override fun initView(savedInstanceState: Bundle?) {
-        isFullScreen()
         controller = findNavController(R.id.main_container)
         val fragment = supportFragmentManager.findFragmentById(R.id.main_container) as NavHostFragment
         val navigator = FixFragmentNavigator(this, supportFragmentManager, fragment.id)
@@ -70,9 +65,6 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(){
                 R.id.navigation_area -> {
                     curPos = MAIN_TAB_AREA
                 }
-                R.id.navigation_square -> {
-                    curPos = MAIN_TAB_SQUARE
-                }
                 R.id.navigation_message -> {
                     curPos = MAIN_TAB_MESSAGE
                 }
@@ -103,7 +95,6 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(){
     private fun switchTab(curPos: Int) {
         when (curPos) {
             MAIN_TAB_AREA -> controller.navigate(R.id.navigation_area)
-            MAIN_TAB_SQUARE -> controller.navigate(R.id.navigation_square)
             MAIN_TAB_MESSAGE -> controller.navigate(R.id.navigation_message)
             MAIN_TAB_MINE -> controller.navigate(R.id.navigation_mine)
         }

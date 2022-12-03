@@ -125,24 +125,26 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:text="*此类信息将用于科研，请如实填写"
-        android:textColor="@color/colorPrimaryDark"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_20"
         android:layout_marginTop="@dimen/dp_20"
-        android:layout_height="wrap_content"/>
+        android:text="*此类信息将用于科研，请如实填写"
+        android:textColor="@color/colorPrimaryDark" />
 
     <TextView
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:text="需要完善您的信息才能下一步"
-        android:textColor="@color/black"
-        android:layout_marginTop="60dp"
-        android:layout_height="wrap_content"/>
+        android:textColor="@color/black" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_marginTop="60dp"
-        android:src="@mipmap/ic_next"
+    <com.ruffian.library.widget.RImageView
+        android:id="@+id/goToIv"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
         android:layout_gravity="end"
-        android:layout_marginEnd="@dimen/dp_20"
-        android:layout_height="60dp"/>
+        android:layout_marginEnd="@dimen/dp_40"
+        android:src="@mipmap/ic_next"
+        app:layout_constraintEnd_toEndOf="parent" />
 </LinearLayout>
