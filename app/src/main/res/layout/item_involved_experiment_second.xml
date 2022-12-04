@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ruffian.library.widget.RConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginEnd="@dimen/dp_16"
+    android:background="@color/white"
+    android:paddingTop="@dimen/dp_10"
+    android:paddingBottom="@dimen/dp_10"
+    app:border_color_normal="@color/colorBlack666"
+    app:border_width_normal="1dp"
+    app:corner_radius="@dimen/dp_8">
+
+    <com.ruffian.library.widget.RImageView
+        android:id="@+id/avatarIv"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@mipmap/icon_ava"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numTv" />
+
+    <TextView
+        android:id="@+id/numTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="30dp"
+        android:text="5.0"
+        android:textColor="#FFC000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/goalTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_2"
+        android:text="分"
+        android:textColor="#FFC000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/numTv"
+        app:layout_constraintStart_toEndOf="@+id/numTv" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:text="文字识别任务"
+        android:textColor="@color/color_2D3132"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/list_divider"
+        app:layout_constraintBottom_toBottomOf="@+id/numTv"
+        app:layout_constraintStart_toEndOf="@+id/goalTv"
+        app:layout_constraintTop_toTopOf="@+id/numTv" />
+
+    <TextView
+        android:id="@+id/remunerationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="¥10"
+        android:textColor="@color/color_44B0AE"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/line"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/yue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:text="约"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/remunerationTv"
+        app:layout_constraintStart_toEndOf="@+id/remunerationTv" />
+
+    <TextView
+        android:id="@+id/timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:text="20"
+        android:textColor="@color/color_44B0AE"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_12"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/yue"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="min"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/remunerationTv"
+        app:layout_constraintStart_toEndOf="@+id/timeTv" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="时间："
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toStartOf="@+id/location"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <TextView
+        android:id="@+id/realTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="07.08"
+        android:textColor="@color/color_2D3132"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/time"
+        app:layout_constraintStart_toEndOf="@+id/time"
+        app:layout_constraintTop_toTopOf="@+id/time" />
+
+    <com.ruffian.library.widget.RTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_14"
+        android:paddingStart="@dimen/dp_14"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingEnd="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_2"
+        android:text="15:40——16:00"
+        android:textColor="@color/white"
+        app:background_normal="@color/color_44B0AE"
+        app:corner_radius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/realTime"
+        app:layout_constraintStart_toEndOf="@+id/realTime"
+        app:layout_constraintTop_toTopOf="@+id/realTime" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_4"
+        android:text="地点："
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toEndOf="@+id/avatarIv"
+        app:layout_constraintTop_toTopOf="@+id/avatarIv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中山大学心理学系系楼303D"
+        android:textColor="@color/color_2D3132"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/location"
+        app:layout_constraintStart_toEndOf="@+id/location"
+        app:layout_constraintTop_toTopOf="@+id/location" />
+
+</com.ruffian.library.widget.RConstraintLayout>
