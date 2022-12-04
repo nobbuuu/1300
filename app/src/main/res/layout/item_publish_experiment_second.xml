@@ -143,22 +143,6 @@
         app:layout_constraintStart_toEndOf="@+id/time"
         app:layout_constraintTop_toTopOf="@+id/time" />
 
-    <com.ruffian.library.widget.RTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_14"
-        android:paddingStart="@dimen/dp_14"
-        android:paddingTop="@dimen/dp_2"
-        android:paddingEnd="@dimen/dp_14"
-        android:paddingBottom="@dimen/dp_2"
-        android:text="15:40——16:00"
-        android:textColor="@color/white"
-        app:background_normal="@color/color_7BE62E"
-        app:corner_radius="50dp"
-        app:layout_constraintBottom_toBottomOf="@+id/realTime"
-        app:layout_constraintStart_toEndOf="@+id/realTime"
-        app:layout_constraintTop_toTopOf="@+id/realTime" />
-
     <TextView
         android:id="@+id/location"
         android:layout_width="wrap_content"
@@ -180,19 +164,67 @@
         app:layout_constraintStart_toEndOf="@+id/location"
         app:layout_constraintTop_toTopOf="@+id/location" />
 
-    <com.ruffian.library.widget.RTextView
+    <ImageView
+        android:id="@+id/statusIv"
+        android:layout_width="80dp"
+        android:src="@mipmap/stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="30dp"/>
+
+    <ImageView
+        android:id="@+id/playIv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:src="@mipmap/ic_play"
+        app:layout_constraintStart_toStartOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/time" />
+
+    <ImageView
+        android:id="@+id/edtIv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_20"
+        android:src="@mipmap/ic_edt"
+        app:layout_constraintStart_toEndOf="@+id/playIv"
+        app:layout_constraintTop_toBottomOf="@+id/time" />
+
+    <ImageView
+        android:id="@+id/closeIv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_20"
+        android:src="@mipmap/ic_close"
+        app:layout_constraintStart_toEndOf="@+id/edtIv"
+        app:layout_constraintTop_toBottomOf="@+id/time" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dp_16"
-        android:paddingStart="@dimen/dp_14"
-        android:paddingTop="@dimen/dp_2"
-        android:paddingEnd="@dimen/dp_14"
-        android:paddingBottom="@dimen/dp_2"
-        android:text="已完成"
-        android:textColor="@color/white"
-        app:background_normal="@color/color_7BE62E"
-        app:corner_radius="@dimen/dp_4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/statusIv"
+        app:layout_constraintEnd_toEndOf="@+id/statusIv"
+        android:layout_marginBottom="@dimen/dp_4"
+        app:layout_constraintStart_toStartOf="@+id/statusIv">
+
+        <TextView
+            android:id="@+id/appointmentNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textColor="#44B0C2"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            android:layout_marginStart="@dimen/dp_4"
+            android:text="人预约" />
+    </LinearLayout>
+
 
 </com.ruffian.library.widget.RConstraintLayout>

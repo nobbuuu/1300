@@ -11,6 +11,7 @@
     <dimen name="dp_16">16dp</dimen>
     <dimen name="dp_18">18dp</dimen>
     <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
     <dimen name="bg_norm_radius">8dp</dimen>
     <dimen name="bg_norm_radius_12">12dp</dimen>
     <dimen name="title_bar_icon_size">24dp</dimen>
