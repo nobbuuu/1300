@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/bgIv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/dk_file_manager_banner"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftColor="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="文字识别任务"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bgIv" />
+
+    <TextView
+        android:id="@+id/numTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="30dp"
+        android:text="5.0"
+        android:textColor="#FFC000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bgIv" />
+
+    <TextView
+        android:id="@+id/goalTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_2"
+        android:text="分"
+        android:textColor="#FFC000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/numTv"
+        app:layout_constraintStart_toEndOf="@+id/numTv" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/list_divider"
+        app:layout_constraintTop_toBottomOf="@+id/goalTv" />
+
+
+    <TextView
+        android:id="@+id/rewardTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_10"
+        android:drawableStart="@mipmap/earmoney"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:text="实验报酬为"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+    <TextView
+        android:id="@+id/remunerationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:text="¥10"
+        android:textColor="@color/color_44B0AE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/rewardTv"
+        app:layout_constraintStart_toEndOf="@+id/rewardTv"
+        app:layout_constraintTop_toTopOf="@+id/rewardTv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="实验完成后由主试支付"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/rewardTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rewardTv" />
+
+    <ImageView
+        android:id="@+id/iconDuration"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:src="@mipmap/tab_ing_normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rewardTv" />
+
+    <TextView
+        android:id="@+id/duration_experiment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_10"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:text="实验时长约"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/iconDuration"
+        app:layout_constraintStart_toEndOf="@+id/iconDuration"
+        app:layout_constraintTop_toTopOf="@+id/iconDuration" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:text="20"
+        android:textColor="@color/color_44B0AE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/duration_experiment"
+        app:layout_constraintStart_toEndOf="@+id/duration_experiment"
+        app:layout_constraintTop_toTopOf="@+id/duration_experiment" />
+
+    <TextView
+        android:id="@+id/unitTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:text="min"
+        app:layout_constraintBottom_toBottomOf="@+id/duration"
+        app:layout_constraintStart_toEndOf="@+id/duration"
+        app:layout_constraintTop_toTopOf="@+id/duration" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="时长轻微上下浮动"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/duration_experiment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/duration_experiment" />
+
+    <ImageView
+        android:id="@+id/iconLocation"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:src="@mipmap/ic_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iconDuration" />
+
+    <TextView
+        android:id="@+id/locationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_12"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:text="中山大学心理学系系楼303D"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/iconLocation"
+        app:layout_constraintStart_toEndOf="@+id/iconLocation"
+        app:layout_constraintTop_toTopOf="@+id/iconLocation" />
+
+    <TextView
+        android:id="@+id/distanceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:text="距离你约"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/locationTv"
+        app:layout_constraintEnd_toStartOf="@+id/distance"
+        app:layout_constraintTop_toTopOf="@+id/locationTv" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:text="20"
+        android:textColor="@color/color_44B0AE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/locationTv"
+        app:layout_constraintEnd_toStartOf="@+id/unitDistance"
+        app:layout_constraintTop_toTopOf="@+id/locationTv" />
+
+    <TextView
+        android:id="@+id/unitDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="km"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/locationTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/locationTv" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dk_dp_5"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@color/list_divider"
+        app:layout_constraintTop_toBottomOf="@+id/iconLocation" />
+
+    <TextView
+        android:id="@+id/introduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="实验介绍"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:background="@color/list_divider"
+        app:layout_constraintBottom_toBottomOf="@+id/introduceTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/introduceTv" />
+
+    <TextView
+        android:id="@+id/introduceTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="实验超简单！主试超级好！欢迎大家来报名呀呀呀，实验超简单！主试超级好！欢迎大家来报名呀呀呀，实验超简单！主试超级好！欢迎大家来报名呀呀呀，实验超简单！主试超级好！欢迎大家来报名呀呀呀，实验超简单！主试超级好！欢迎大家来报名呀呀呀，实验超简单！主试超级好"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/line3"
+        app:layout_constraintTop_toBottomOf="@+id/introduce" />
+
+    <TextView
+        android:id="@+id/experimentAsk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="实验要求"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/introduceTv" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="请确保您完全符合条件"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/experimentAsk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/experimentAsk" />
+
+    <LinearLayout
+        android:id="@+id/askLay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/experimentAsk">
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_14"
+            android:paddingTop="1dp"
+            android:paddingEnd="@dimen/dp_14"
+            android:paddingBottom="1dp"
+            android:text="性别男"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:background_normal="#EB8A9E"
+            app:corner_radius="@dimen/dp_40" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_14"
+            android:paddingTop="1dp"
+            android:paddingEnd="@dimen/dp_14"
+            android:paddingBottom="1dp"
+            android:text="没有做过类似实验"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:background_normal="#EB8A9E"
+            app:corner_radius="@dimen/dp_40" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_14"
+            android:paddingTop="1dp"
+            android:paddingEnd="@dimen/dp_14"
+            android:paddingBottom="1dp"
+            android:text="视力正常"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:background_normal="#EB8A9E"
+            app:corner_radius="@dimen/dp_40" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_14"
+            android:paddingTop="1dp"
+            android:paddingEnd="@dimen/dp_14"
+            android:paddingBottom="1dp"
+            android:text="经常参加运动"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:background_normal="#EB8A9E"
+            app:corner_radius="@dimen/dp_40" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/askLay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/askLay1">
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_14"
+            android:paddingTop="1dp"
+            android:paddingEnd="@dimen/dp_14"
+            android:paddingBottom="1dp"
+            android:text="没有吃过早饭"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:background_normal="#EB8A9E"
+            app:corner_radius="@dimen/dp_40" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_14"
+            android:paddingTop="1dp"
+            android:paddingEnd="@dimen/dp_14"
+            android:paddingBottom="1dp"
+            android:text="晚上不熬夜"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:background_normal="#EB8A9E"
+            app:corner_radius="@dimen/dp_40" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/experimentRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="实验评价"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/askLay2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="累计 16 人 做出评价"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
