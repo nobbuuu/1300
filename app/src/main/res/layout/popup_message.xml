@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.ruffian.library.widget.RRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.ruffian.library.widget.RImageView
+            android:id="@+id/iconIv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_ava" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/textTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iconIv"
+            android:layout_toRightOf="@id/iconIv"
+            android:text="文字识别任务"
+            android:textSize="18sp" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/fiveTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/textTv"
+            android:layout_marginLeft="100dp"
+            android:layout_toRightOf="@id/textTv"
+            android:text="5.0分"
+            android:textColor="@color/color_F7AF34"
+            android:textSize="18sp" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/tenTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTv"
+            android:layout_alignLeft="@id/textTv"
+            android:text="￥10"
+            android:textColor="@color/greed_4E"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/twentyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTv"
+            android:layout_marginLeft="200dp"
+            android:text=" 约 20 min"
+            android:textColor="@color/greed_4E"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/distenceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tenTv"
+            android:layout_alignLeft="@id/tenTv"
+            android:text="距离你约 0.4 km" />
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/distenceTv"
+            android:layout_marginLeft="150dp"
+            android:src="@mipmap/logoiv" />
+
+    </com.ruffian.library.widget.RRelativeLayout>
+
+    <com.ruffian.library.widget.RRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10">
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/addressTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地点：" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/addressTv"
+            android:text="中山大学心理学系系楼303D"
+            android:textColor="@color/black" />
+
+    </com.ruffian.library.widget.RRelativeLayout>
+
+    <com.ruffian.library.widget.RRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10">
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/simpleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="简介：" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/simpleTv"
+            android:text="实验超简单！主试超级好！欢迎大家来报名呀呀呀，还差五个差五个男生五个女生！！！！"
+            android:textColor="@color/black" />
+
+    </com.ruffian.library.widget.RRelativeLayout>
+
+    <com.ruffian.library.widget.RRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10">
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/evaluateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评价：" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/desTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/evaluateTv"
+            android:text="主试超温柔！！(9)"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_main"
+            app:corner_radius="5dp" />
+
+        <com.ruffian.library.widget.RTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/desTv"
+            android:text="实验轻松（8）"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_main"
+            app:corner_radius="5dp" />
+    </com.ruffian.library.widget.RRelativeLayout>
+
+    <com.ruffian.library.widget.RRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10">
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/requreTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="要求：" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/sanguangTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/requreTv"
+            android:text="不散光(9)"
+            android:textColor="@color/white"
+            app:background_normal="@color/main_red_color_40"
+            app:corner_radius="5dp"
+
+            />
+
+        <com.ruffian.library.widget.RTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/sanguangTv"
+            android:text="男（20）"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_F7AF34_40"
+            app:corner_radius="5dp" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/selectTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/requreTv"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="可选时间段"
+            android:textColor="@color/black" />
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/requreTv"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/selectTime"
+            android:src="@mipmap/selecttime" />
+
+
+    </com.ruffian.library.widget.RRelativeLayout>
+
+    <com.ruffian.library.widget.RTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="8月7日" />
+
+    <com.ruffian.library.widget.RLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/icon_ava"
+            app:is_circle="true" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="14：00-14：20"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_00B050"
+            app:corner_radius="5dp" />
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/icon_ava"
+            app:is_circle="true" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="14：00-14：20"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_00B050"
+            app:corner_radius="5dp" />
+
+    </com.ruffian.library.widget.RLinearLayout>
+
+    <com.ruffian.library.widget.RLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/icon_ava"
+            app:is_circle="true" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="14：00-14：20"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_00B050"
+            app:corner_radius="5dp" />
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/icon_ava"
+            app:is_circle="true" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="14：00-14：20"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_00B050"
+            app:corner_radius="5dp" />
+
+    </com.ruffian.library.widget.RLinearLayout>
+
+    <com.ruffian.library.widget.RLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/icon_ava"
+            app:is_circle="true" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="14：00-14：20"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_00B050"
+            app:corner_radius="5dp" />
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/icon_ava"
+            app:is_circle="true" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="14：00-14：20"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_00B050"
+            app:corner_radius="5dp" />
+
+    </com.ruffian.library.widget.RLinearLayout>
+
+    <com.ruffian.library.widget.RTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="8月8日" />
+
+    <com.ruffian.library.widget.RLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/icon_ava"
+            app:is_circle="true" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="14：00-14：20"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_00B050"
+            app:corner_radius="5dp" />
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/icon_ava"
+            app:is_circle="true" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="14：00-14：20"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_00B050"
+            app:corner_radius="5dp" />
+
+    </com.ruffian.library.widget.RLinearLayout>
+
+    <com.ruffian.library.widget.RLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/icon_ava"
+            app:is_circle="true" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="14：00-14：20"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_00B050"
+            app:corner_radius="5dp" />
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/icon_ava"
+            app:is_circle="true" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="14：00-14：20"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_00B050"
+            app:corner_radius="5dp" />
+
+    </com.ruffian.library.widget.RLinearLayout>
+
+    <com.ruffian.library.widget.RLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/icon_ava"
+            app:is_circle="true" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="14：00-14：20"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_00B050"
+            app:corner_radius="5dp" />
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/icon_ava"
+            app:is_circle="true" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="14：00-14：20"
+            android:textColor="@color/white"
+            app:background_normal="@color/color_00B050"
+            app:corner_radius="5dp" />
+
+    </com.ruffian.library.widget.RLinearLayout>
+
+    <com.ruffian.library.widget.RLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@mipmap/bofang" />
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@mipmap/edit" />
+
+        <com.ruffian.library.widget.RImageView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:src="@mipmap/cancel" />
+
+
+    </com.ruffian.library.widget.RLinearLayout>
+
+
+</LinearLayout>

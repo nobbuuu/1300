@@ -43,8 +43,8 @@
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowDisablePreview">true</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:background">@android:color/transparent</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:windowBackground">@color/white</item>
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.6</item>
     </style>

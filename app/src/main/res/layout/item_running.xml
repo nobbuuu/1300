@@ -1,93 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.ruffian.library.widget.RConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="200dp"
     android:layout_marginStart="@dimen/dp_16"
     android:layout_marginTop="@dimen/dp_16"
     android:layout_marginEnd="@dimen/dp_16"
     android:background="@color/white"
-    android:paddingTop="@dimen/dp_10"
-    app:border_color_normal="@color/colorBlack666"
-    app:border_width_normal="1dp"
-    app:corner_radius="@dimen/dp_8">
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_10">
 
-    <TextView
-        android:id="@+id/apply"
-        android:layout_width="wrap_content"
+    <com.ruffian.library.widget.RRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/consumptionTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="消费决策任务"
+            android:textSize="20sp"
+
+            />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:padding="5dp"
+            android:text="套餐"
+            app:background_normal="@color/color_wait"
+            app:corner_radius="5dp" />
+
+
+    </com.ruffian.library.widget.RRelativeLayout>
+
+    <com.ruffian.library.widget.RRelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="申请人"
-        app:layout_constraintEnd_toEndOf="@+id/avatarIv"
-        app:layout_constraintStart_toStartOf="@+id/avatarIv"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/avatarIv"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="@dimen/dp_10"
-        android:layout_marginBottom="@dimen/dp_20"
-        android:src="@mipmap/avatar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/apply" />
+        >
 
-    <TextView
-        android:id="@+id/applyTime"
-        android:layout_width="wrap_content"
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/scoreFourFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="4.5分"
+            android:textStyle="bold"
+            android:textColor="@color/color_wait"
+            android:textSize="@dimen/sp_18" />
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dp_20"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/scoreFourFive"
+            android:background="@color/colorGray98" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/moneyFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_toRightOf="@id/viewLine"
+            android:text="￥5"
+            android:textStyle="bold"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/sp_18" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/hourFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_toRightOf="@id/moneyFive"
+            android:text="约4min"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/sp_18" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:text="距离你约 0.4 km" />
+
+    </com.ruffian.library.widget.RRelativeLayout>
+
+    <com.ruffian.library.widget.RRelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:text="申请时间"
-        app:layout_constraintStart_toEndOf="@+id/avatarIv"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="5dp">
 
-    <TextView
-        android:id="@+id/timeTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_40"
-        android:layout_marginTop="@dimen/dp_10"
-        android:text="7.8下午"
-        app:layout_constraintStart_toEndOf="@+id/avatarIv"
-        app:layout_constraintTop_toBottomOf="@+id/applyTime" />
+        <com.ruffian.library.widget.RImageView
+            android:id="@+id/imageIv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@mipmap/psychology" />
 
-    <ImageView
-        android:id="@+id/timeIv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_40"
-        android:src="@mipmap/ic_time"
-        app:layout_constraintStart_toEndOf="@+id/avatarIv"
-        app:layout_constraintTop_toBottomOf="@+id/timeTv" />
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/addressTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toRightOf="@id/imageIv"
+            android:text="地点："
 
-    <TextView
-        android:id="@+id/viewTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dp_20"
-        android:text="查\n看"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            />
 
-    <TextView
-        android:id="@+id/applyExperiment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dp_40"
-        android:text="申请实验"
-        app:layout_constraintEnd_toStartOf="@+id/viewTv"
-        app:layout_constraintTop_toTopOf="parent" />
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toRightOf="@id/addressTv"
+            android:text="中山大学心理学系系楼303D" />
 
-    <ImageView
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginTop="@dimen/dp_10"
-        android:layout_marginBottom="@dimen/dp_4"
-        android:src="@mipmap/icon_ava"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/applyExperiment"
-        app:layout_constraintStart_toStartOf="@+id/applyExperiment"
-        app:layout_constraintTop_toBottomOf="@+id/applyExperiment" />
-</com.ruffian.library.widget.RConstraintLayout>
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/imageIv"
+            android:text="时间:"
+
+            />
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/sevenEight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7.8"
+            android:textSize="@dimen/dp_20"
+            android:layout_toRightOf="@id/timeTv"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="@dimen/dp_10"/>
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="13:40—13:45"
+            android:layout_toRightOf="@id/sevenEight"
+            android:layout_marginTop="30dp"
+            android:textSize="15sp"
+            android:layout_centerHorizontal="true"
+            app:background_normal="@color/regular_green"
+            app:corner_radius="10dp"
+            android:layout_marginLeft="@dimen/dp_10"
+
+            />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/seeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="@dimen/dp_10"
+            android:text="查看"
+            android:textSize="20sp"
+            app:background_normal="@color/color_main"
+            app:corner_radius="5dp" />
+
+    </com.ruffian.library.widget.RRelativeLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
