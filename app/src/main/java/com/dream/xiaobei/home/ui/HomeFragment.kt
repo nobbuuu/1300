@@ -1,14 +1,16 @@
 package com.dream.xiaobei.home.ui
 
-import android.R.attr.banner
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.dream.xiaobei.R
+import com.dream.xiaobei.bean.AllExperimentBean
 import com.dream.xiaobei.databinding.FragmentHomeBinding
-import com.dream.xiaobei.home.vm.AreaViewModel
+import com.dream.xiaobei.home.adapter.HomeExperimentAdapter
+import com.dream.xiaobei.home.vm.HomeViewModel
 import com.tcl.base.common.ui.BaseFragment
+import com.tcl.base.weiget.recylerview.WaterFallItemDecoration
 import com.youth.banner.adapter.BannerImageAdapter
 import com.youth.banner.holder.BannerImageHolder
 import com.youth.banner.indicator.CircleIndicator
@@ -19,12 +21,13 @@ import com.youth.banner.indicator.CircleIndicator
  *@date   2022/1/26
  *description 首页
  */
-class HomeFragment : BaseFragment<AreaViewModel, FragmentHomeBinding> (){
+class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>() {
 
 
+    val mAdapter = HomeExperimentAdapter()
     override fun initView(savedInstanceState: Bundle?) {
 
-        val urlList = arrayListOf<String>("1","2","3")
+        val urlList = arrayListOf<String>("1", "2", "3")
         mBinding.banner.setAdapter(object : BannerImageAdapter<String>(urlList) {
             override fun onBindView(
                 holder: BannerImageHolder,
@@ -41,5 +44,15 @@ class HomeFragment : BaseFragment<AreaViewModel, FragmentHomeBinding> (){
         })
             .addBannerLifecycleObserver(this) //添加生命周期观察者
             .setIndicator(CircleIndicator(requireContext()))
+        mBinding.homeRv.apply {
+            adapter  = mAdapter
+            addItemDecoration(WaterFallItemDecoration(0,30))
+        }
+    }
+
+    override fun initDataOnViewCreated() {
+        super.initDataOnViewCreated()
+        val data = mutableListOf<AllExperimentBean>(AllExperimentBean(1), AllExperimentBean(2))
+        mAdapter.setList(data)
     }
 }

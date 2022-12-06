@@ -7,5 +7,5 @@ import com.tcl.base.common.BaseViewModel
  *@date   2022/1/26
  *description
  */
-class AreaViewModel : BaseViewModel() {
+class HomeViewModel : BaseViewModel() {
 }

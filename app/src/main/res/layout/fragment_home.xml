@@ -8,155 +8,174 @@
     android:paddingStart="@dimen/dp_20"
     android:paddingEnd="@dimen/dp_20">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/dp_16"
-        android:text="@string/app_name"
-        android:textColor="@color/color_2D3132"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RelativeLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_40"
-        android:layout_marginTop="@dimen/dp_20">
+        android:layout_height="match_parent">
 
-        <com.ruffian.library.widget.REditText
-            android:id="@+id/mainSearch"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:hint="搜索"
-            android:paddingStart="30dp"
-            android:textSize="@dimen/sp_13"
-            app:background_normal="#F7F7F7"
-            app:corner_radius="@dimen/dp_4" />
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/searchIv"
-            android:layout_width="@dimen/dk_dp_15"
-            android:layout_height="@dimen/dk_dp_15"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="8dp"
-            android:src="@mipmap/ic_search" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/app_name"
+                android:textColor="@color/color_2D3132"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_20">
 
-    <com.youth.banner.Banner
-        android:id="@+id/banner"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="@dimen/dp_20" />
+                <com.ruffian.library.widget.REditText
+                    android:id="@+id/mainSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:hint="搜索"
+                    android:paddingStart="30dp"
+                    android:textSize="@dimen/sp_13"
+                    app:background_normal="#F7F7F7"
+                    app:corner_radius="@dimen/dp_4" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/dp_20"
-        android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/searchIv"
+                    android:layout_width="@dimen/dk_dp_15"
+                    android:layout_height="@dimen/dk_dp_15"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:src="@mipmap/ic_search" />
 
-        <ImageView
-            android:id="@+id/questionIv"
-            android:layout_width="@dimen/dp_50"
-            android:layout_height="60dp"
-            android:layout_marginStart="@dimen/dp_8"
-            android:src="@mipmap/ca_question"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            </RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_4"
-            android:text="问卷"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_12"
-            app:layout_constraintEnd_toEndOf="@+id/questionIv"
-            app:layout_constraintStart_toStartOf="@+id/questionIv"
-            app:layout_constraintTop_toBottomOf="@+id/questionIv" />
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="@dimen/dp_20" />
 
-        <ImageView
-            android:id="@+id/experimentIv"
-            android:layout_width="@dimen/dp_50"
-            android:layout_height="60dp"
-            android:layout_marginStart="@dimen/dp_14"
-            android:src="@mipmap/ca_experiment"
-            app:layout_constraintStart_toEndOf="@+id/questionIv"
-            app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_4"
-            android:text="实验"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_12"
-            app:layout_constraintEnd_toEndOf="@+id/experimentIv"
-            app:layout_constraintStart_toStartOf="@+id/experimentIv"
-            app:layout_constraintTop_toBottomOf="@+id/experimentIv" />
-        <ImageView
-            android:id="@+id/electricalIv"
-            android:layout_width="@dimen/dp_50"
-            android:layout_height="60dp"
-            android:layout_marginStart="@dimen/dp_14"
-            android:src="@mipmap/ca_electrical"
-            app:layout_constraintStart_toEndOf="@+id/experimentIv"
-            app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/questionIv"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:src="@mipmap/ca_question"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_4"
-            android:text="脑电"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_12"
-            app:layout_constraintEnd_toEndOf="@+id/electricalIv"
-            app:layout_constraintStart_toStartOf="@+id/electricalIv"
-            app:layout_constraintTop_toBottomOf="@+id/electricalIv" />
-        <ImageView
-            android:id="@+id/otherIv"
-            android:layout_width="@dimen/dp_50"
-            android:layout_height="60dp"
-            android:layout_marginStart="@dimen/dp_14"
-            android:src="@mipmap/ca_other"
-            app:layout_constraintStart_toEndOf="@+id/electricalIv"
-            app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:text="问卷"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="@+id/questionIv"
+                    app:layout_constraintStart_toStartOf="@+id/questionIv"
+                    app:layout_constraintTop_toBottomOf="@+id/questionIv" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_4"
-            android:text="其他"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_12"
-            app:layout_constraintEnd_toEndOf="@+id/otherIv"
-            app:layout_constraintStart_toStartOf="@+id/otherIv"
-            app:layout_constraintTop_toBottomOf="@+id/otherIv" />
+                <ImageView
+                    android:id="@+id/experimentIv"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="@dimen/dp_14"
+                    android:src="@mipmap/ca_experiment"
+                    app:layout_constraintStart_toEndOf="@+id/questionIv"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/segmentationIv"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="@dimen/dp_10"
-            android:src="@mipmap/ca_xf"
-            android:layout_marginEnd="@dimen/dp_20"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="@+id/otherIv"
-            />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:text="实验"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="@+id/experimentIv"
+                    app:layout_constraintStart_toStartOf="@+id/experimentIv"
+                    app:layout_constraintTop_toBottomOf="@+id/experimentIv" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_4"
-            android:text="专业细分"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_12"
-            app:layout_constraintEnd_toEndOf="@+id/segmentationIv"
-            app:layout_constraintStart_toStartOf="@+id/segmentationIv"
-            app:layout_constraintTop_toBottomOf="@+id/segmentationIv" />
+                <ImageView
+                    android:id="@+id/electricalIv"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="@dimen/dp_14"
+                    android:src="@mipmap/ca_electrical"
+                    app:layout_constraintStart_toEndOf="@+id/experimentIv"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:text="脑电"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="@+id/electricalIv"
+                    app:layout_constraintStart_toStartOf="@+id/electricalIv"
+                    app:layout_constraintTop_toBottomOf="@+id/electricalIv" />
+
+                <ImageView
+                    android:id="@+id/otherIv"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="@dimen/dp_14"
+                    android:src="@mipmap/ca_other"
+                    app:layout_constraintStart_toEndOf="@+id/electricalIv"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:text="其他"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="@+id/otherIv"
+                    app:layout_constraintStart_toStartOf="@+id/otherIv"
+                    app:layout_constraintTop_toBottomOf="@+id/otherIv" />
+
+                <ImageView
+                    android:id="@+id/segmentationIv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:src="@mipmap/ca_xf"
+                    app:layout_constraintBottom_toBottomOf="@+id/otherIv"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:text="专业细分"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="@+id/segmentationIv"
+                    app:layout_constraintStart_toStartOf="@+id/segmentationIv"
+                    app:layout_constraintTop_toBottomOf="@+id/segmentationIv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/homeRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_16"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>

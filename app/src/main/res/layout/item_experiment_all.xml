@@ -3,8 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/dp_16"
-    android:layout_marginEnd="@dimen/dp_16"
     android:background="@color/white"
     android:paddingTop="@dimen/dp_10"
     android:paddingBottom="@dimen/dp_10"
@@ -12,15 +10,6 @@
     app:border_width_normal="1dp"
     app:corner_radius="@dimen/dp_8">
 
-    <com.ruffian.library.widget.RImageView
-        android:id="@+id/avatarIv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="@dimen/dp_10"
-        android:layout_marginTop="@dimen/dp_10"
-        android:background="@mipmap/icon_ava"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numTv" />
 
     <TextView
         android:id="@+id/numTv"
@@ -120,6 +109,16 @@
         app:layout_constraintStart_toEndOf="@+id/yue"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
+    <com.dream.xiaobei.widget.SpanTextview
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="距离你约 0.4 km"
+        android:textSize="@dimen/dp_12"
+        app:layout_constraintBottom_toBottomOf="@id/timeTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/timeTv"
+        app:spanText="0.4" />
     <TextView
         android:id="@+id/unit"
         android:layout_width="wrap_content"
@@ -130,17 +129,13 @@
         app:layout_constraintBottom_toBottomOf="@+id/remunerationTv"
         app:layout_constraintStart_toEndOf="@+id/timeTv" />
 
-
-    <com.dream.xiaobei.widget.SpanTextview
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="距离你约 0.4 km"
-        app:layout_constraintBottom_toBottomOf="@+id/unit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/unit"
-        app:spanText="0.4" />
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allRv"
+        app:layout_constraintTop_toBottomOf="@+id/numTv"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_12"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_height="wrap_content"/>
     <com.ruffian.library.widget.RTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -149,10 +144,11 @@
         android:paddingTop="@dimen/dp_2"
         android:paddingEnd="@dimen/dp_14"
         android:paddingBottom="@dimen/dp_2"
-        android:text="已完成"
+        android:text="查看"
         android:textColor="@color/white"
-        app:background_normal="@color/color_7BE62E"
+        app:background_normal="#41CDDB"
         app:corner_radius="@dimen/dp_4"
+        app:layout_constraintTop_toBottomOf="@+id/allRv"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
