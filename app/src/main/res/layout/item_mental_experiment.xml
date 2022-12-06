@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ruffian.library.widget.RConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginEnd="@dimen/dp_16"
+    android:background="@color/white"
+    android:paddingTop="@dimen/dp_10"
+    android:paddingBottom="@dimen/dp_10"
+    app:border_color_normal="@color/colorBlack666"
+    app:border_width_normal="1dp"
+    app:corner_radius="@dimen/dp_8">
+
+    <com.ruffian.library.widget.RImageView
+        android:id="@+id/avatarIv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:is_circle="true"
+        android:src="@mipmap/avatar"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="何健飞"
+        android:textColor="@color/user_name_color"
+        app:layout_constraintEnd_toEndOf="@+id/avatarIv"
+        app:layout_constraintStart_toStartOf="@+id/avatarIv"
+        app:layout_constraintTop_toBottomOf="@+id/avatarIv" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:text="文字识别任务"
+        android:textColor="@color/color_2D3132"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/list_divider"
+        app:layout_constraintBottom_toBottomOf="@+id/numTv"
+        app:layout_constraintStart_toEndOf="@+id/goalTv"
+        app:layout_constraintTop_toTopOf="@+id/numTv" />
+
+    <TextView
+        android:id="@+id/remunerationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:text="¥10"
+        android:textColor="@color/color_44B0AE"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintStart_toEndOf="@+id/title"
+        app:layout_constraintTop_toTopOf="@+id/title" />
+
+    <com.dream.xiaobei.widget.SpanTextview
+        android:id="@+id/timeSt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:text="约 4   min"
+        android:textColor="@color/color_default"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintStart_toEndOf="@+id/remunerationTv"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:spanText="4" />
+
+    <com.dream.xiaobei.widget.SpanTextview
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:text="5.0分"
+        android:textColor="@color/yellow_FAE43C"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintStart_toEndOf="@+id/timeSt"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:spanColor="@color/yellow_FAE43C"
+        app:spanText="5.0" />
+
+    <TextView
+        android:id="@+id/askTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="要求："
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <LinearLayout
+        android:id="@+id/askLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:layout_constraintBottom_toBottomOf="@+id/askTv"
+        app:layout_constraintStart_toEndOf="@+id/askTv"
+        app:layout_constraintTop_toTopOf="@+id/askTv">
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_4"
+            android:paddingTop="1dp"
+            android:paddingEnd="@dimen/dp_4"
+            android:paddingBottom="1dp"
+            android:text="没有吃过早饭"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:background_normal="#EB8A9E"
+            app:corner_radius="@dimen/dp_40" />
+
+        <com.ruffian.library.widget.RTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_4"
+            android:paddingTop="1dp"
+            android:paddingEnd="@dimen/dp_4"
+            android:paddingBottom="1dp"
+            android:text="晚上不熬夜"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:background_normal="#EB8A9E"
+            app:corner_radius="@dimen/dp_40" />
+
+    </LinearLayout>
+</com.ruffian.library.widget.RConstraintLayout>

@@ -26,7 +26,7 @@
             android:value="true" />
 
         <activity android:name=".other.LaunchActivity"/>
-        <activity android:name=".main.MainActivity">
+        <activity android:name=".home.ui.SubjectActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
