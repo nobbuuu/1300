@@ -3,19 +3,13 @@ package com.dream.xiaobei.message
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.*
-import android.webkit.WebView
 import android.widget.PopupWindow
-import com.blankj.utilcode.util.ToastUtils
 import com.dream.xiaobei.R
 import com.dream.xiaobei.bean.EmptyBean
 import com.dream.xiaobei.databinding.FragmentMessageBinding
 import com.dream.xiaobei.message.vm.MessageViewModel
-import com.dream.xiaobei.user.adapter.RunningAdapter
-import com.ruffian.library.widget.RCheckBox
-import com.ruffian.library.widget.RImageView
-import com.ruffian.library.widget.RTextView
+import com.dream.xiaobei.user.adapter.HomeExperimentAdapter
 import com.tcl.base.common.ui.BaseFragment
-import com.tcl.base.weiget.ConsecutiveScrollerLayout
 
 
 /**
@@ -30,7 +24,7 @@ class MessageFragment : BaseFragment<MessageViewModel, FragmentMessageBinding>()
 
     override fun initView(savedInstanceState: Bundle?) {
 
-        val mAdapter = RunningAdapter()
+        val mAdapter = HomeExperimentAdapter()
         val data = arrayListOf<EmptyBean>()
         repeat(3) {
             data.add(EmptyBean())

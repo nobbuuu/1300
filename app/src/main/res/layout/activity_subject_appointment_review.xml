@@ -9,6 +9,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <com.hjq.bar.TitleBar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            app:leftColor="@color/black"
+            app:leftTitle="被试预约审核" />
+
         <com.ruffian.library.widget.RRelativeLayout
             android:layout_width="match_parent"
             android:layout_height="90dp"

@@ -1,6 +1,7 @@
 package com.dream.xiaobei.home.adapter
 
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.chad.library.adapter.base.BaseQuickAdapter
@@ -8,6 +9,8 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.dream.xiaobei.R
 import com.dream.xiaobei.bean.AllExperimentBean
 import com.dream.xiaobei.bean.AllExperimentImgBean
+import com.dream.xiaobei.dialog.MentalExperimentDialog
+import com.tcl.base.kt.ktClick
 import com.tcl.base.weiget.recylerview.GridSpacingItemDecoration
 import com.tcl.base.weiget.recylerview.WaterFallItemDecoration
 
@@ -20,8 +23,8 @@ class HomeExperimentAdapter :
                 val imgAdapter = AllExperimentImgAdapter()
                 imgRv.apply {
                     adapter = imgAdapter
-                    layoutManager = GridLayoutManager(context,3)
-                    addItemDecoration(GridSpacingItemDecoration(3,30, 0,false))
+                    layoutManager = GridLayoutManager(context, 3)
+                    addItemDecoration(GridSpacingItemDecoration(3, 30, 0, false))
                 }
                 val imgData = mutableListOf<AllExperimentImgBean>(
                     AllExperimentImgBean("4", "消费决策", "¥5", R.mipmap.psychology),
@@ -29,6 +32,9 @@ class HomeExperimentAdapter :
                     AllExperimentImgBean("70", "情绪识别", "¥30", R.mipmap.icon_ava)
                 )
                 imgAdapter.setList(imgData)
+                holder.getView<TextView>(R.id.checkTv).ktClick {
+                    MentalExperimentDialog(context).show()
+                }
             }
             2 -> {
 

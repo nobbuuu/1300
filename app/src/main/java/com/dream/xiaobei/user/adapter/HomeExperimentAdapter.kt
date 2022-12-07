@@ -1,13 +1,11 @@
 package com.dream.xiaobei.user.adapter
 
-import com.blankj.utilcode.util.ToastUtils
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.dream.xiaobei.R
 import com.dream.xiaobei.bean.EmptyBean
-import com.ruffian.library.widget.RTextView
 
-class RunningAdapter:BaseQuickAdapter<EmptyBean,BaseViewHolder>(R.layout.item_running) {
+class HomeExperimentAdapter:BaseQuickAdapter<EmptyBean,BaseViewHolder>(R.layout.item_experiment) {
     init {
         addChildClickViewIds(R.id.seeButton)
     }

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ruffian.library.widget.RConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:background_normal="@color/white"
+    app:corner_radius_top_left="@dimen/dp_8"
+    app:corner_radius_top_right="@dimen/dp_8">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="心里实验一条龙"
+        android:textColor="@color/color_2D3132"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.ruffian.library.widget.RTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_20"
+        android:paddingStart="@dimen/dp_4"
+        android:paddingTop="1dp"
+        android:paddingEnd="@dimen/dp_4"
+        android:paddingBottom="1dp"
+        android:text="套餐"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:background_normal="@color/color_wait"
+        app:corner_radius="3dp"
+        app:layout_constraintStart_toEndOf="@+id/title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_14"
+        android:text="地点："
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中山大学心理学系系楼303D"
+        android:textColor="@color/color_2D3132"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/location"
+        app:layout_constraintStart_toEndOf="@+id/location"
+        app:layout_constraintTop_toTopOf="@+id/location" />
+
+    <com.dream.xiaobei.widget.SpanTextview
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="5.0分"
+        android:textColor="@color/yellow_FAE43C"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:spanColor="@color/yellow_FAE43C"
+        app:spanText="5.0" />
+
+    <com.dream.xiaobei.widget.SpanTextview
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="距离你约 0.4 km"
+        app:layout_constraintBottom_toBottomOf="@+id/location"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/dk_color_999999"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintTop_toTopOf="@+id/location"
+        app:spanText="0.4" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mentalRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <TextView
+        android:id="@+id/tipsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="单击以上实验，可单独预约"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mentalRv" />
+
+    <TextView
+        android:id="@+id/selectTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="可选时间段"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/tipsTv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/timeChoseRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_16"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/yyTv"
+        app:layout_constraintTop_toBottomOf="@+id/selectTv" />
+
+    <com.ruffian.library.widget.RTextView
+        android:id="@+id/yyTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:paddingStart="@dimen/dp_14"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingEnd="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_2"
+        android:text="预约"
+        app:background_normal="#F3D169"
+        app:corner_radius="@dimen/dp_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:text_color_normal="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="一键预约套餐内所有实验"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/yyTv"
+        app:layout_constraintEnd_toStartOf="@+id/yyTv"
+        app:layout_constraintTop_toTopOf="@+id/yyTv" />
+</com.ruffian.library.widget.RConstraintLayout>
